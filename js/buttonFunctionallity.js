@@ -1,10 +1,28 @@
-const arrayImg = [
-  "https://www.cocinayaficiones.com/wp-content/uploads/Magret-de-pato-y-granada-destacada.jpg",
-  "https://static.dw.com/image/15800920_403.jpg",
-  "https://www.unileverfoodsolutions.es/dam/global-ufs/mcos/SPAIN/calcmenu/recipes/ES-recipes/general/panecillo-de-pollo-crujiente-con-ensalada-de-col-lombarda/main-header.jpg/jcr:content/renditions/cq5dam.thumbnail.desktop.jpeg",
-  "https://www.gourmet4life.com/image0428/09/092384dd26ce82ecffe2e2b3f4ec39ba.jpg",
-  "https://www.gourmet4life.com/image0428/6e/6eb1689db36b39acd7ab8260a0254c5d.jpg",
-  "https://www.gourmet4life.com/image0428/64/64b00629d6fedd4124e6a3e92535bd8c.jpg",
+function loadMenu() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    document.getElementById("replaceableImage").innerHTML = this.responseText;
+  };
+  xhttp.open("GET", "menu.txt", true);
+  xhttp.send();
+}
+
+function loadHome() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    document.getElementById("replaceableImage").innerHTML = this.responseText;
+  };
+  xhttp.open("GET", "home.txt", true);
+  xhttp.send();
+}
+
+const recipes = [
+  "https://bakeitwithlove.com/wp-content/uploads/2022/01/what-to-serve-with-burgers-sq.jpg",
+  "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2014%2F07%2F10%2Fpepperoni-pizza-ck-x.jpg",
+  "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/0749D9BC-260D-40F4-A07F-54814C4A82B4/Derivates/A73A7793-F3EE-4B90-ABA4-1CC1A0C3E18F.jpg",
+  "https://images.immediate.co.uk/production/volatile/sites/30/2021/02/Next-level-tacos-e163429.jpg?quality=90&webp=true&resize=600,545",
+  "https://www.feastingathome.com/wp-content/uploads/2016/04/pad-thai-2.jpg",
+  "https://www.elmundoeats.com/wp-content/uploads/2021/02/FP-Quick-30-minutes-chicken-ramen.jpg",
 ];
 
 let i = 0;
@@ -12,18 +30,16 @@ let i = 0;
 function changeImageSelectedBack() {
   if (i > 0) {
     i--;
-    document.getElementById("left").src = arrayImg[i];
-    document.getElementById("selected").src = arrayImg[i + 1];
-    document.getElementById("right").src = arrayImg[i + 2];
+    document.getElementById("left").src = recipes[i];
+    document.getElementById("selected").src = recipes[i + 1];
+    document.getElementById("right").src = recipes[i + 2];
   }
 }
 function changeImageSelectedFront() {
-  if (i < arrayImg.length - 3) {
+  if (i < recipes.length - 3) {
     i++;
-    document.getElementById("left").src = arrayImg[i];
-    document.getElementById("selected").src = arrayImg[i + 1];
-    document.getElementById("right").src = arrayImg[i + 2];
+    document.getElementById("left").src = recipes[i];
+    document.getElementById("selected").src = recipes[i + 1];
+    document.getElementById("right").src = recipes[i + 2];
   }
 }
-
-

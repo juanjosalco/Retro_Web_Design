@@ -12,7 +12,7 @@
   <body>
     <div class="container">
       <div class="title">
-        <h1>LA COCINA DE DON JUAN</h1>
+        <h1 style="margin-block: 24px">LA COCINA DE DON JUAN</h1>
       </div>
       <div class="contentContainer">
         <div class="main">
@@ -24,39 +24,25 @@
             rerum cupiditate quia suscipit? Sequi laborum, autem debitis dolor
             maiores quaerat.
           </p>
-          <div class="image">
-            <img src="/img/kitchen.jpg" alt="Imagen de cocina" />
+          <div class="image" id="replaceableImage">
+            <img src="/img/kitchen.jpg" alt="Imagen de cocina"/>
           </div>
-          <h2>Imágenes de nuestros mejores platillos</h2>
+          <h2 style="margin-block: 24px">Imágenes de nuestros mejores platillos</h2>
           <div class="foodContainer">
-            <div class="foodCard">
-                <h4 class="asideSubtitle">Asada</h4>
-                <img src="https://www.cocinayaficiones.com/wp-content/uploads/Magret-de-pato-y-granada-destacada.jpg" alt="" class="image imageBorder" id="left">
-                <p class="foodBrief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, eos, quam nisi cupiditate minus eius mollitia.</p>
+            <div class="card" style="width: 18rem;">
+              <img id="left" src="https://bakeitwithlove.com/wp-content/uploads/2022/01/what-to-serve-with-burgers-sq.jpg" class="card-img-top imageCard" alt="...">
             </div>
-            <div class="foodCardSelected">
-                <h4 class="asideSubtitle">Rib-Eye</h4>
-                <img src="https://static.dw.com/image/15800920_403.jpg" alt="" class="image imageBorder" id="selected">
-                <p class="foodBrief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, eos, quam nisi cupiditate minus eius mollitia.</p>
+            <div class="card" style="width: 18rem;">
+              <img id="selected" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2014%2F07%2F10%2Fpepperoni-pizza-ck-x.jpg" class="card-img-top imageCard" alt="...">
             </div>
-            <div class="foodCard">
-                <h4 class="asideSubtitle">Hamburguesa</h4>
-                <img src="https://www.unileverfoodsolutions.es/dam/global-ufs/mcos/SPAIN/calcmenu/recipes/ES-recipes/general/panecillo-de-pollo-crujiente-con-ensalada-de-col-lombarda/main-header.jpg/jcr:content/renditions/cq5dam.thumbnail.desktop.jpeg" alt="" class="image imageBorder" id="right">
-                <p class="foodBrief">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, eos, quam nisi cupiditate minus eius mollitia.</p>
+            <div class="card" style="width: 18rem;">
+              <img id="right" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/0749D9BC-260D-40F4-A07F-54814C4A82B4/Derivates/A73A7793-F3EE-4B90-ABA4-1CC1A0C3E18F.jpg" class="card-img-top imageCard" alt="...">
             </div>
           </div>
           <div class="selectFoodContainer">
             <button class="button" onclick="changeImageSelectedBack()">Anterior</button>
             <button class="button" onclick="changeImageSelectedFront()">Siguiente</button>
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
+          </div>
         </div>
         <div class="aside">
           <div class="asideTitle">
@@ -84,12 +70,11 @@
             </div>
           </div>
           <div class="asideCard">
-            <h4 class="asideSubtitle">Otras Páginas</h4>
+            <h4 class="asideSubtitle">Nuestro Famoso Menú</h4>
             <p class="informativeCard">
               <ul class="listMenu">
-                <li><a class="itemMenu" href="#">Menú</a></li>
-                <li><a class="itemMenu" href="#">Galería</a></li>
-                <li><a class="itemMenu" href="#">Reseñas</a></li>
+                <li class="itemMenu"  onclick="loadHome()" style="text-align: center">INICIO</li>
+                <li class="itemMenu"  onclick="loadMenu()" style="text-align: center">MENÚ</li>
               </ul>
             </p>
           </div>

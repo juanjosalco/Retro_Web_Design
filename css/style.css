@@ -88,6 +88,10 @@ body{
     min-height: 6rem;
     max-height: 6rem;
 }
+.imageCard{
+    min-height: 250px;
+    max-height: 250px;
+}
 .footer{
     height: 100px;
     color: #fff;
@@ -109,6 +113,10 @@ body{
     padding: 1rem;
     border-radius: .5rem;
     font-weight: bold;
+}
+.message {
+    max-height: 200px !important;
+    min-height: 100px !important;
 }
 /* Fonts del Mini Reto */
 

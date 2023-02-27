@@ -1,0 +1,3 @@
+<div class="image" id="replaceableImage">
+            <img src="/img/kitchen.jpg" alt="Imagen de cocina"/>
+ </div>
