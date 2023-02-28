@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
     <script type="text/javascript" src="/js/buttonFunctionallity.js"></script>
     <title>Diseño Web Retro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -17,12 +18,15 @@
       <div class="contentContainer">
         <div class="main">
           <h2>La mejor cocina de la región</h2>
-          <h3>¿Quiénes somos?</h3>
+          <h3 style="margin-top: 2rem;">¿Quiénes somos?</h3>
           <p class="brief">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-            aliquid reprehenderit unde tenetur a id ad nulla sunt, distinctio
-            rerum cupiditate quia suscipit? Sequi laborum, autem debitis dolor
-            maiores quaerat.
+            La Cocina de Don Juan es una empresa de comida dedicada a ofrecer a nuestros clientes deliciosas opciones gastronómicas con el auténtico sabor casero. Nuestra empresa se enfoca en la elaboración de platillos con ingredientes frescos y de alta calidad, y con recetas cuidadosamente elaboradas para ofrecer un sabor único y excepcional.
+          </p>
+          <p class="brief">
+            Desde nuestros inicios, nos hemos comprometido en ofrecer una experiencia culinaria de primer nivel a nuestros clientes, en la cual la calidad de nuestros productos y la atención personalizada son nuestra prioridad. Cada platillo es elaborado con pasión y dedicación, lo que garantiza que nuestros clientes disfruten de una comida deliciosa y satisfactoria.
+          </p>
+          <p class="brief">
+            En La Cocina de Don Juan, nos esforzamos por mantener altos estándares de calidad en todo lo que hacemos, desde la selección de los ingredientes hasta la presentación final de nuestros platillos. Nos enorgullece ser una empresa responsable y comprometida con la satisfacción de nuestros clientes, y esperamos seguir creciendo y expandiendo nuestra oferta gastronómica para seguir siendo una opción de confianza en el mercado de la comida casera.
           </p>
           <div class="image" id="replaceableImage">
             <img src="/img/kitchen.jpg" alt="Imagen de cocina"/>
@@ -49,11 +53,18 @@
             <h3>¡Contenido Importante!</h3>
           </div>
           <div class="asideCard">
+            <h4 class="asideSubtitle">Nuestro Famoso Menú</h4>
+            <p class="informativeCard">
+              <ul class="listMenu">
+                <li class="itemMenu"  onclick="loadHome()" style="text-align: center">INICIO</li>
+                <li class="itemMenu"  onclick="loadMenu()" style="text-align: center">MENÚ</li>
+              </ul>
+            </p>
+            </div>
+          <div class="asideCard">
             <h4 class="asideSubtitle">Newsletter</h4>
             <p class="informativeCard">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
-              ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+              Únase a nuestro Newsletter hoy y manténgase actualizado sobre las últimas noticias, consejos y tendencias en sus temas favoritos. Regístrese ahora para recibir contenido exclusivo, ofertas especiales y más directamente en su bandeja de entrada. ¡No te pierdas esta oportunidad de ser parte de nuestra comunidad!
             </p>
           </div>
           <div class="asideCard">
@@ -69,14 +80,10 @@
               ></iframe>
             </div>
           </div>
-          <div class="asideCard">
-            <h4 class="asideSubtitle">Nuestro Famoso Menú</h4>
-            <p class="informativeCard">
-              <ul class="listMenu">
-                <li class="itemMenu"  onclick="loadHome()" style="text-align: center">INICIO</li>
-                <li class="itemMenu"  onclick="loadMenu()" style="text-align: center">MENÚ</li>
-              </ul>
-            </p>
+          <button class="button" id="button1">Click Para Descubrir Contenido Oculto</button>
+          <div style="display: none; text-align: center" id="hided" class="asideCard">
+            <h4>WOW ENCONTRASTE UN DESCUENTO!!!</h4>
+            <img src="https://img.freepik.com/vector-premium/plantilla-voucher-descuento-concepto-comida-bebida_1302-7739.jpg?w=2000"/>
           </div>
         </div>
       </div>
@@ -84,6 +91,13 @@
         <h5>Todos los derechos reservados</h5>
       </div>
     </div>
+    <script>
+      $(document).ready(function() {
+        $("#button1").click(function() {
+          $("#hided").show(1500);
+        });
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
