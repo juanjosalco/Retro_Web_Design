@@ -74,10 +74,7 @@ Para crear una copia de este proyecto y correrlo localmente sigue los siguientes
 
 ## Prerrequisitos
 
-Tener alguna de las últimas versiones de npm descargada.
-Para descargar Node.js y poder usar npm sigue el siguiente link y comienza con su instalación
-
-Link de descarga de Node.js: https://nodejs.org/en/download/
+Ninguno
 
 ### Instalación
 
@@ -86,10 +83,10 @@ Link de descarga de Node.js: https://nodejs.org/en/download/
    ```sh
    git clone git@github.com:juanjosalco/Retro_Web_Design.git
    ```
-2. Instala los paquetes de NPM dentro de la carpeta creada después de clonar el repositorio:
+2. Recomendación para correr el proyecyo:
 
-   ```sh
-   npm install
-   ```
+  -  Descarga la extensión para Visual Studio Code llamada "Live Server".
+
+3. En caso de no contar con la extensión se recomienda abrir el archivo index.html en el navegador
 
 <p align="right">( <a href="#readme-top">Regresar al Inicio</a> )</p>
